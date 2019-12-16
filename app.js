@@ -1,6 +1,23 @@
 new Vue({
     el:'#vue-app',
     data:{
+        available:false,
+        nearby:false
+
+    },
+    methods:{
+       
+    },
+    computed:{
+       compClasses:function(){
+           return{
+               available:this.available,
+               nearby:this.nearby
+           }
+       } 
+    }
+    /*
+    data:{
         age:20,
         a:0,
         b:0
@@ -19,7 +36,7 @@ new Vue({
     }
     
 
-    /*
+    
     data:{
         name:'',
         age :'',
