@@ -1,6 +1,35 @@
-new Vue({
-    el:'#vue-app',
+var one=new Vue({
+    el:'#vue-app-one',
+    data:{   
+        title:'Vue App One'
+    },
+    methods:{
+       
+    },
+    computed:{
+     greet:function(){
+         return'Hello From app one :)';
+     }
+    }
+});
+var two=new Vue({
+    el:'#vue-app-two',
     data:{
+        title:'Vue App Two'
+    },
+    methods:{
+       changeTitle:function(){
+           one.title="Title Changed";
+       }
+    },
+    computed:{
+        greet:function(){
+            return'Yo dudes,this is app 2 speaking to ya :)';
+        }
+    }
+});
+    /*
+data:{
         name:'jack',
         characters:['Mario','Luigi','Yoshi','Bowser'],
         ninjas:[
@@ -17,8 +46,6 @@ new Vue({
     computed:{
     
     }
-    /*
-
     data:{
         available:false,
         nearby:false
@@ -35,7 +62,7 @@ new Vue({
            }
        } 
     }
-    /*
+    
     data:{
         age:20,
         a:0,
@@ -87,5 +114,5 @@ new Vue({
            // console.log('you entered your age');
         }
     }*/
-    });
+    
     
