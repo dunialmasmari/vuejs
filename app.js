@@ -1,4 +1,32 @@
+var data={
+    name: 'Yushi'
+}
+
+Vue.components('greeting',{
+    template:'<p> hey there ,i am {{name}}</p> <button v-on:click="changeName">Change name</button>',
+    data :function(){
+        return{
+            name: data
+        }
+    },
+    methods:{
+        changeName:function(){
+            this.name='Mario';
+        }
+
+    }
+});
+
 var one=new Vue({
+    el:'#vue-app-one',
+});
+var two=new Vue({
+    el:'#vue-app-two',
+   
+});
+
+    /*
+    var one=new Vue({
     el:'#vue-app-one',
     data:{   
         title:'Vue App One'
@@ -28,7 +56,7 @@ var two=new Vue({
         }
     }
 });
-    /*
+
 data:{
         name:'jack',
         characters:['Mario','Luigi','Yoshi','Bowser'],

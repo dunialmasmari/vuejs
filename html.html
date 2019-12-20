@@ -10,18 +10,28 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
+    <h1>Components</h1>
     <div id="vue-app-one">
+        <h2>Vue app one</h2>
+        <greeting></greeting>
+    </div>
+    <div id="vue-app-two">
+        <h2>Vue app two</h2> 
+        <greeting></greeting>
+    </div>
+
+
+    <!--div id="vue-app-one">
         <h2>{{ title }}</h2>
         <p>{{ greet}}</p> 
 
-    </div>
+    </!--div>
     <div id="vue-app-two">
         <h2>{{ title }}</h2>  
         <p>{{ greet}}</p> 
         <button v-on:click="changeTitle">Change App One Title</button>
     </div>
-
-    <!--div id="vue-app">
+    <div id="vue-app">
 
           < <h1>Looping through lists</h1>
         <ul>
