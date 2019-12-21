@@ -10,7 +10,14 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-    <h1>Components</h1>
+    <div id="vue-app">
+        <h2>Refs</h2>
+        <input type="text" ref="input"/>
+        <button v-on:click="readRefs">Submit</button>
+        <p>Your fav food:{{output}}</p>
+        <div ref="test">Hello</div>
+    </div>
+    <!--h1>Components</!--h1>
     <div id="vue-app-one">
         <h2>Vue app one</h2>
         <greeting></greeting>
@@ -21,7 +28,7 @@
     </div>
 
 
-    <!--div id="vue-app-one">
+    <div id="vue-app-one">
         <h2>{{ title }}</h2>
         <p>{{ greet}}</p> 
 

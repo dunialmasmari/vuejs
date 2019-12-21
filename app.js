@@ -1,4 +1,22 @@
-var data={
+new Vue({
+    el:'#vue-app',
+    data:{   
+       output:"Your fav food"
+    },
+    methods:{
+       readRefs:function(){
+           console.log(this.$refs.test.innerText);
+           this.output=this.$refs.input.value;
+       }
+    },
+    computed:{
+    
+    }
+});
+
+    /*
+
+    var data={
     name: 'Yushi'
 }
 
@@ -25,7 +43,7 @@ var two=new Vue({
    
 });
 
-    /*
+
     var one=new Vue({
     el:'#vue-app-one',
     data:{   
