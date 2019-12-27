@@ -11,12 +11,29 @@
 </head>
 <body>
     <div id="vue-app">
-        <h2>Refs</h2>
+           <!-- bag image -->
+           <div id="bag" v-bind:class="{ burst: ended }"></div>
+
+           <!-- bag health bar -->
+           <div id="bag-health">
+               <div v-bind:style="{ width: health + '%' }"></div>
+           </div>
+
+           <!-- game control buttons -->
+           <div id="controls">
+               <button v-on:click="punch" v-show="!ended">Punch</button>
+               <button v-on:click="restart">Restart</button>
+           </div>
+    </div>
+
+        <!--h2>Refs</h2>
         <input type="text" ref="input"/>
         <button v-on:click="readRefs">Submit</button>
         <p>Your fav food:{{output}}</p>
-        <div ref="test">Hello</div>
-    </div>
+        <div ref="test">Hello</div-->
+
+
+            
     <!--h1>Components</!--h1>
     <div id="vue-app-one">
         <h2>Vue app one</h2>
